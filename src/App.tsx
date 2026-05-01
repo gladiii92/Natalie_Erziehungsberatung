@@ -338,7 +338,7 @@ export default function App() {
           >
             <div className="relative z-10 rounded-[20px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] aspect-[3/4] md:aspect-[4/5] max-h-[80vh] mx-auto">
               <img 
-                src="public/input_file_1.png" 
+                src="/input_file_1.png" 
                 alt="Natalia - Erziehungsberatung" 
                 className="w-full h-full object-cover sepia-[.1] brightness-[1.05] contrast-[1.05] saturate-[0.85]"
                 loading="lazy"
@@ -408,7 +408,7 @@ export default function App() {
             >
               <div className="rounded-[40px] overflow-hidden shadow-2xl relative">
                 <img 
-                  src="public/input_file_0.png" 
+                  src="/input_file_0.png" 
                   alt="Natalia Portrait" 
                   className="w-full h-auto object-cover aspect-[4/5] sepia-[.1] brightness-[1.05] contrast-[1.05] saturate-[0.85]"
                   loading="lazy"
@@ -590,7 +590,7 @@ export default function App() {
           <button onClick={() => setIsContactModalOpen(true)} className="btn-primary">
             Kostenloses Erstgespräch buchen
           </button>
-          <p className="mt-6 text-xs text-[var(--color-muted)] uppercase tracking-widest">Dauer: ca. 30 Minuten • Via Zoom</p>
+          <p className="mt-6 text-xs text-[var(--color-muted)] uppercase tracking-widest">Dauer: ca. 30 Minuten</p>
         </div>
       </Section>
 
