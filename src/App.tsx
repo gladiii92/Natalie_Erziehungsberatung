@@ -420,7 +420,7 @@ export default function App() {
             </motion.div>
             
             <div>
-              <h2 className="text-3xl md:text-4xl mb-8 font-serif">Ich begleitete dich dabei</h2>
+              <h2 className="text-3xl md:text-4xl mb-8 font-serif">Ich begleite dich dabei</h2>
               <div className="space-y-6 text-[var(--color-muted)] text-lg leading-relaxed">
                 <p>
                   Ich begleite dich dabei, deinen eigenen Weg zu finden - mit Herz, Verständnis und auf Augenhöhe.
