@@ -1,16 +1,16 @@
 import { useState, useEffect, ReactNode, FormEvent } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
+import { motion, useScroll, useTransform, AnimatePresence, type Variants } from 'motion/react'
 import { Menu, X, ArrowRight, Star, Instagram, Mail, Phone, Heart, Sparkles, Leaf } from 'lucide-react';
 
 // Animation variants
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
-  }
-};
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+}
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -338,7 +338,7 @@ export default function App() {
           >
             <div className="relative z-10 rounded-[20px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] aspect-[3/4] md:aspect-[4/5] max-h-[80vh] mx-auto">
               <img 
-                src="input_file_1.png" 
+                src="Bilder/input_file_1.png" 
                 alt="Natalia - Erziehungsberatung" 
                 className="w-full h-full object-cover sepia-[.1] brightness-[1.05] contrast-[1.05] saturate-[0.85]"
                 loading="lazy"
@@ -408,7 +408,7 @@ export default function App() {
             >
               <div className="rounded-[40px] overflow-hidden shadow-2xl relative">
                 <img 
-                  src="input_file_0.png" 
+                  src="Bilder/input_file_0.png" 
                   alt="Natalia Portrait" 
                   className="w-full h-auto object-cover aspect-[4/5] sepia-[.1] brightness-[1.05] contrast-[1.05] saturate-[0.85]"
                   loading="lazy"
