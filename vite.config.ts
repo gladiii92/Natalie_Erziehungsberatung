@@ -4,7 +4,7 @@ import path from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/Natalie_Erziehungsberatung/',  // ← das ist neu
+  base: '/',  // ← ändern
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
