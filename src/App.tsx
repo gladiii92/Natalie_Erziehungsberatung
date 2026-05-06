@@ -1,16 +1,16 @@
 import { useState, useEffect, ReactNode, FormEvent } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence, type Variants } from 'motion/react'
+import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { Menu, X, ArrowRight, Star, Instagram, Mail, Phone, Heart, Sparkles, Leaf } from 'lucide-react';
 
 // Animation variants
-const fadeInUp: Variants = {
+const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
+  visible: { 
+    opacity: 1, 
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
-  },
-}
+    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
+  }
+};
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -233,9 +233,9 @@ export default function App() {
         }`}
       >
         <div className="container-custom flex justify-between items-center">
-          <a href="#" className="flex flex-col">
-            <span className="font-serif text-xl md:text-2xl font-medium tracking-[0.1em] text-[var(--color-dark)] uppercase">Natalia</span>
-            <span className="text-[var(--color-gold)] font-script text-lg -mt-1">Erziehungsberatung</span>
+          <a href="#" className="flex items-baseline gap-3 group">
+            <span className="font-serif text-xl md:text-2xl font-medium tracking-[0.1em] text-[var(--color-dark)] uppercase transition-colors group-hover:text-[var(--color-gold)]">Natalia</span>
+            <span className="text-[var(--color-gold)] font-script text-2xl md:text-3xl ml-1">Erziehungsberatung</span>
           </a>
           
           {/* Desktop Nav */}
@@ -310,6 +310,8 @@ export default function App() {
           >
             <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 items-center mb-6">
               <span className="text-[var(--color-gold)] uppercase tracking-[0.2em] text-xs font-semibold">Erziehungsberatung</span>
+              <div className="h-1 w-1 rounded-full bg-[var(--color-gold)] opacity-40 mx-1"></div>
+              <span className="text-[var(--color-gold)] uppercase tracking-[0.2em] text-xs font-semibold">15+ Jahre Erfahrung</span>
               <Heart size={14} className="text-[var(--color-gold)] fill-[var(--color-gold)] opacity-40 ml-2" />
               <div className="h-[1px] w-12 bg-[var(--color-gold)]"></div>
             </motion.div>
@@ -336,15 +338,18 @@ export default function App() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="order-1 md:order-2 relative"
           >
-            <div className="relative z-10 rounded-[20px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] aspect-[3/4] md:aspect-[4/5] max-h-[80vh] mx-auto">
-              <img 
-                src="./input_file_1.png" 
-                alt="Natalia - Erziehungsberatung" 
-                className="w-full h-full object-cover sepia-[.1] brightness-[1.05] contrast-[1.05] saturate-[0.85]"
-                loading="lazy"
-                referrerPolicy="no-referrer"
-              />
-            </div>
+              <div className="relative z-10 rounded-[20px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] aspect-[3/4] md:aspect-[4/5] max-h-[80vh] mx-auto bg-[var(--color-sand)]">
+                <img 
+                  src="/input_file_1.png" 
+                  alt="Natalia - Erziehungsberatung" 
+                  className="w-full h-full object-cover sepia-[.1] brightness-[1.05] contrast-[1.05] saturate-[0.85] transition-transform duration-700 hover:scale-105"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://picsum.photos/seed/natalia_hero/800/1000";
+                  }}
+                />
+              </div>
             {/* Decorative elements behind image */}
             <div className="absolute -bottom-6 -right-6 w-full h-full border border-[var(--color-gold)] rounded-[20px] -z-10 opacity-30 hidden md:block"></div>
           </motion.div>
@@ -406,13 +411,16 @@ export default function App() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="rounded-[40px] overflow-hidden shadow-2xl relative">
+              <div className="rounded-[40px] overflow-hidden shadow-2xl relative bg-[var(--color-sand)]">
                 <img 
-                  src="./input_file_0.png" 
+                  src="/input_file_0.png" 
                   alt="Natalia Portrait" 
-                  className="w-full h-auto object-cover aspect-[4/5] sepia-[.1] brightness-[1.05] contrast-[1.05] saturate-[0.85]"
+                  className="w-full h-auto object-cover aspect-[4/5] sepia-[.1] brightness-[1.05] contrast-[1.05] saturate-[0.85] transition-transform duration-700 hover:scale-105"
                   loading="lazy"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://picsum.photos/seed/natalia_portrait/800/1000";
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg)]/20 to-transparent"></div>
               </div>
@@ -420,17 +428,17 @@ export default function App() {
             </motion.div>
             
             <div>
-              <h2 className="text-3xl md:text-4xl mb-8 font-serif">Ich begleite dich dabei</h2>
-              <div className="space-y-6 text-[var(--color-muted)] text-lg leading-relaxed">
+              <h2 className="text-3xl md:text-4xl mb-8 font-serif">Ich begleitete dich dabei</h2>
+              <div className="space-y-4 text-[var(--color-muted)] text-lg leading-relaxed">
                 <p>
-                  Ich begleite dich dabei, deinen eigenen Weg zu finden - mit Herz, Verständnis und auf Augenhöhe.
+                  Als <strong>gelernte Erzieherin</strong> mit über <strong>15 Jahren Erfahrung</strong> in der pädagogischen Arbeit begleite ich dich dabei, deinen eigenen Weg zu finden - mit Herz, Verständnis und auf Augenhöhe.
                 </p>
                 <div className="h-[1px] w-12 bg-[var(--color-gold)] opacity-30"></div>
                 <p className="font-serif italic text-xl text-[var(--color-dark)]">
                   Für eine Erziehung, die sich leicht und stimmig anfühlt.
                 </p>
                 <p>
-                    Mein Ansatz verbindet Empathie mit praktischen Lösungen für den Alltag. Als Natalia freue ich mich darauf, dich und deine Familie ein Stück zu begleiten.
+                    Mein Ansatz verbindet Empathie mit praktischen Lösungen für den Alltag. Als Natalia freue ich mich darauf, dich und deine Familie ein Stück zu begleiten. Auf Instagram findest du mich auch unter dem Namen "Pädagogischer Berater".
                 </p>
               </div>
               <div className="mt-10 pt-10 border-t border-[var(--color-sand)]">
@@ -579,6 +587,55 @@ export default function App() {
         </div>
       </Section>
 
+      {/* Other Branches Section */}
+      <Section className="bg-white py-24 relative">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif mb-6">Ganzheitliche Beratung</h2>
+            <div className="w-24 h-[1px] bg-[var(--color-gold)] mx-auto mb-8 opacity-30"></div>
+            <p className="text-[var(--color-muted)] max-w-2xl mx-auto italic text-lg">
+              Neben der Erziehungsberatung biete ich auch Unterstützung in weiteren Bereichen an, die zu einem gesunden und glücklichen Familienleben beitragen.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-[var(--color-bg)] p-12 rounded-[40px] border border-[var(--color-sand)] hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+              <div>
+                <h3 className="font-serif text-3xl mb-6">LR Health & Beauty</h3>
+                <p className="text-[var(--color-muted)] mb-8 leading-relaxed">
+                  Entdecke hochwertige Produkte für dein Wohlbefinden und deine Gesundheit. Eine perfekte Ergänzung für Mütter, die sich auch um sich selbst kümmern möchten.
+                </p>
+              </div>
+              <a 
+                href="https://www.lrworld.com/Natiulmer" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-secondary w-fit uppercase tracking-widest text-xs px-10"
+              >
+                Zum LR Shop
+              </a>
+            </div>
+
+            <div className="bg-[var(--color-bg)] p-12 rounded-[40px] border border-[var(--color-sand)] hover:shadow-xl transition-all duration-500 flex flex-col justify-between">
+              <div>
+                <h3 className="font-serif text-3xl mb-6">Ringana Frischepartner</h3>
+                <p className="text-[var(--color-muted)] mb-8 leading-relaxed">
+                  Nachhaltige, frische und effektive Pflege für dich und deine Familie. 100% Wirkstoff, 0% Chemie.
+                </p>
+              </div>
+              <a 
+                href="https://natalia.ringana.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-secondary w-fit uppercase tracking-widest text-xs px-10"
+              >
+                Zu Ringana
+              </a>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Booking CTA */}
       <Section id="contact" className="bg-white text-center py-24 relative overflow-hidden">
         <div className="watercolor-blob blob-sage w-[400px] h-[400px] -bottom-20 -right-20 opacity-20"></div>
@@ -599,9 +656,12 @@ export default function App() {
         <div className="container-custom">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="col-span-1 md:col-span-1">
-              <a href="#" className="font-serif text-2xl font-bold block mb-6">Natalia</a>
+              <a href="#" className="flex flex-col mb-6 group">
+                <span className="font-serif text-2xl font-medium tracking-[0.1em] transition-colors group-hover:text-[var(--color-gold)]">Natalia</span>
+                <span className="text-[var(--color-gold)] font-script text-2xl -mt-1">Erziehungsberatung</span>
+              </a>
               <div className="flex gap-4">
-                <a href="https://instagram.com/natalia.erziehungsberatung" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-[var(--color-sand)] flex items-center justify-center hover:bg-[var(--color-gold)] hover:text-white transition-colors">
+                <a href="https://instagram.com/natalia_paedagogischer_berater" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-[var(--color-sand)] flex items-center justify-center hover:bg-[var(--color-gold)] hover:text-white transition-colors">
                   <Instagram size={18} />
                 </a>
                 <a href="mailto:hallo@natalia.erziehungsberatung.de" className="w-10 h-10 rounded-full border border-[var(--color-sand)] flex items-center justify-center hover:bg-[var(--color-gold)] hover:text-white transition-colors">
