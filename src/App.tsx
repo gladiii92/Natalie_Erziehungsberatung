@@ -48,25 +48,20 @@ const LegalModal = ({ section, onClose }: { section: LegalSection, onClose: () =
         <h2 className="text-2xl font-serif mb-4">Impressum</h2>
         <p>Angaben gemäß § 5 TMG</p>
         <p>
-          [Vorname Nachname]<br />
-          [Straße Hausnummer]<br />
-          [PLZ Ort]
+          Natalia Ulmer<br />
+          Sebastianstraße 9<br />
+          88471 Laupheim
         </p>
         <h3 className="text-lg font-bold mt-4">Kontakt</h3>
         <p>
-          Telefon: [Telefonnummer]<br />
-          E-Mail: [E-Mail-Adresse]
-        </p>
-        <h3 className="text-lg font-bold mt-4">Umsatzsteuer-ID</h3>
-        <p>
-          Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-          [DE999999999]
+          Telefon: +49 1517 0657581<br />
+          E-Mail: Ulmernatalia@gmail.com
         </p>
         <h3 className="text-lg font-bold mt-4">Redaktionell verantwortlich</h3>
         <p>
-          [Vorname Nachname]<br />
-          [Straße Hausnummer]<br />
-          [PLZ Ort]
+          Natalia Ulmer<br />
+          Sebastianstraße 9<br />
+          88471 Laupheim
         </p>
         <h3 className="text-lg font-bold mt-4">EU-Streitschlichtung</h3>
         <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-gold)]">https://ec.europa.eu/consumers/odr/</a>.<br /> Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
@@ -78,30 +73,32 @@ const LegalModal = ({ section, onClose }: { section: LegalSection, onClose: () =
       <div className="space-y-4 text-sm text-[var(--color-dark)]">
         <h2 className="text-2xl font-serif mb-4">Datenschutzerklärung</h2>
         <h3 className="text-lg font-bold">1. Datenschutz auf einen Blick</h3>
-        <p><strong>Allgemeine Hinweise</strong><br/>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+        <p><strong>Allgemeine Hinweise</strong><br/>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.</p>
         <h3 className="text-lg font-bold mt-4">2. Hosting</h3>
-        <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:<br/>[Name des Hosters]</p>
+        <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:<br/>Google Cloud Platform (GCP). Die Datenverarbeitung erfolgt auf Servern innerhalb der EU.</p>
         <h3 className="text-lg font-bold mt-4">3. Allgemeine Hinweise und Pflichtinformationen</h3>
         <p><strong>Datenschutz</strong><br/>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
-        <p><strong>Hinweis zur verantwortlichen Stelle</strong><br/>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br/>[Vorname Nachname]<br/>[Straße Hausnummer]<br/>[PLZ Ort]<br/><br/>Telefon: [Telefonnummer]<br/>E-Mail: [E-Mail-Adresse]</p>
+        <p><strong>Hinweis zur verantwortlichen Stelle</strong><br/>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br/>Natalia Ulmer<br/>Sebastianstraße 9<br/>88471 Laupheim<br/><br/>Telefon: +49 1517 0657581<br/>E-Mail: Ulmernatalia@gmail.com</p>
         <h3 className="text-lg font-bold mt-4">4. Datenerfassung auf dieser Website</h3>
-        <p><strong>Cookies</strong><br/>Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Textdateien und richten auf Ihrem Endgerät keinen Schaden an.</p>
-        <p><strong>Kontaktformular</strong><br/>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
+        <p><strong>Cookies</strong><br/>Unsere Internetseiten verwenden so genannte „Cookies“. Cookies sind kleine Textdateien und richten auf Ihrem Endgerät keinen Schaden an. Sie dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.</p>
+        <p><strong>Kontaktformular</strong><br/>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
       </div>
     ),
     agb: (
       <div className="space-y-4 text-sm text-[var(--color-dark)]">
         <h2 className="text-2xl font-serif mb-4">Allgemeine Geschäftsbedingungen (AGB)</h2>
         <h3 className="text-lg font-bold">1. Geltungsbereich</h3>
-        <p>Für die Geschäftsbeziehung zwischen [Name des Anbieters] (nachfolgend „Anbieter“) und dem Kunden (nachfolgend „Kunde“) gelten ausschließlich die nachfolgenden Allgemeinen Geschäftsbedingungen in ihrer zum Zeitpunkt der Bestellung gültigen Fassung.</p>
+        <p>Für die Geschäftsbeziehung zwischen Natalia Ulmer (nachfolgend „Anbieter“) und dem Kunden (nachfolgend „Kunde“) gelten ausschließlich die nachfolgenden Allgemeinen Geschäftsbedingungen in ihrer zum Zeitpunkt der Bestellung gültigen Fassung.</p>
         <h3 className="text-lg font-bold mt-4">2. Vertragsschluss</h3>
-        <p>Die Darstellung der Dienstleistungen auf der Website stellt kein rechtlich bindendes Angebot, sondern eine Aufforderung zur Bestellung dar.</p>
+        <p>Die Darstellung der Dienstleistungen auf der Website stellt kein rechtlich bindendes Angebot, sondern eine Aufforderung zur Buchung eines Erstgesprächs oder einer Beratung dar. Ein Vertrag kommt erst durch eine schriftliche Bestätigung des Termins oder Angebots zustande.</p>
         <h3 className="text-lg font-bold mt-4">3. Leistungen</h3>
-        <p>Der Umfang der vertraglichen Leistungen ergibt sich aus der Leistungsbeschreibung des Anbieters.</p>
+        <p>Der Umfang der vertraglichen Leistungen ergibt sich aus der Leistungsbeschreibung des Anbieters (Einzelsitzungen, Pakete, etc.).</p>
         <h3 className="text-lg font-bold mt-4">4. Preise und Zahlung</h3>
-        <p>Es gelten die zum Zeitpunkt des Vertragsschlusses vereinbarten Preise. Die Zahlung erfolgt nach Rechnungsstellung.</p>
+        <p>Es gelten die zum Zeitpunkt des Vertragsschlusses vereinbarten Preise. Die Zahlung erfolgt nach Rechnungsstellung per Überweisung.</p>
         <h3 className="text-lg font-bold mt-4">5. Haftung</h3>
         <p>Ansprüche des Kunden auf Schadensersatz sind ausgeschlossen. Hiervon ausgenommen sind Schadensersatzansprüche des Kunden aus der Verletzung des Lebens, des Körpers, der Gesundheit oder aus der Verletzung wesentlicher Vertragspflichten.</p>
+        <h3 className="text-lg font-bold mt-4">6. Widerrufsbelehrung</h3>
+        <p>Verbraucher haben ein gesetzliches Widerrufsrecht. Informationen hierzu werden dem Kunden bei Vertragsschluss gesondert mitgeteilt.</p>
       </div>
     )
   };
@@ -172,7 +169,7 @@ const ContactModal = ({ onClose }: { onClose: () => void }) => {
               
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-[var(--color-dark)] mb-1">E-Mail</label>
-                <input required type="email" id="email" className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[var(--color-gold)] focus:border-[var(--color-gold)] transition-colors" placeholder="deine@email.de" />
+                <input required type="email" id="email" className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[var(--color-gold)] focus:border-[var(--color-gold)] transition-colors" placeholder="Ulmernatalia@gmail.com" />
               </div>
 
               <div>
@@ -664,7 +661,7 @@ export default function App() {
                 <a href="https://instagram.com/natalia_paedagogischer_berater" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-[var(--color-sand)] flex items-center justify-center hover:bg-[var(--color-gold)] hover:text-white transition-colors">
                   <Instagram size={18} />
                 </a>
-                <a href="mailto:hallo@natalia.erziehungsberatung.de" className="w-10 h-10 rounded-full border border-[var(--color-sand)] flex items-center justify-center hover:bg-[var(--color-gold)] hover:text-white transition-colors">
+                <a href="mailto:Ulmernatalia@gmail.com" className="w-10 h-10 rounded-full border border-[var(--color-sand)] flex items-center justify-center hover:bg-[var(--color-gold)] hover:text-white transition-colors">
                   <Mail size={18} />
                 </a>
               </div>
@@ -691,7 +688,8 @@ export default function App() {
             <div>
               <h4 className="font-serif mb-4 uppercase tracking-[0.2em] text-xs font-semibold">Kontakt</h4>
               <ul className="space-y-2 text-sm text-[var(--color-muted)]">
-                <li className="flex items-center gap-2"><Mail size={14} /> hallo@natalia.erziehungsberatung.de</li>
+                <li className="flex items-center gap-2"><Mail size={14} /> Ulmernatalia@gmail.com</li>
+                <li className="flex items-center gap-2"><Phone size={14} /> +49 1517 0657581</li>
                 <li className="flex items-center gap-2 font-script text-lg text-[var(--color-gold)] mt-2">Mehr Verbindung. Mehr Gelassenheit. Mehr DU.</li>
               </ul>
             </div>
