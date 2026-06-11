@@ -658,7 +658,7 @@ export default function App() {
                 <span className="text-[var(--color-gold)] font-script text-2xl -mt-1">Erziehungsberatung</span>
               </a>
               <div className="flex gap-4">
-                <a href="https://instagram.com/natalia_paedagogischer_berater" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-[var(--color-sand)] flex items-center justify-center hover:bg-[var(--color-gold)] hover:text-white transition-colors">
+                <a href="https://www.instagram.com/natalia.erziehungsberatung/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-[var(--color-sand)] flex items-center justify-center hover:bg-[var(--color-gold)] hover:text-white transition-colors">
                   <Instagram size={18} />
                 </a>
                 <a href="mailto:Ulmernatalia@gmail.com" className="w-10 h-10 rounded-full border border-[var(--color-sand)] flex items-center justify-center hover:bg-[var(--color-gold)] hover:text-white transition-colors">
