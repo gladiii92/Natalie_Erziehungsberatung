@@ -9,7 +9,7 @@
     "start": "next start",
     "clean": "rm -rf out .next dist",
     "lint": "tsc --noEmit",
-    "deploy": "next build && npx gh-pages -d out -t true"
+    "deploy": "next build && npx gh-pages -d out -t --nojekyll --cname www.natalia-erziehungsberatung.de"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.3.3",
