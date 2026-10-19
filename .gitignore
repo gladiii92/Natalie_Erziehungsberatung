@@ -2,7 +2,12 @@ node_modules/
 build/
 Bilder/
 dist/
+out/
+.next/
+*.tsbuildinfo
+legacy/
 coverage/
+screenshot*.png
 ablauf.txt
 .DS_Store
 *.log
